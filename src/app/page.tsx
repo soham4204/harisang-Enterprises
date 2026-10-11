@@ -14,6 +14,7 @@ import BackToTop from "@/components/ui/BackToTop";
 import AnalyticsTracker from "@/components/analytics/AnalyticsTracker";
 import LightboxModal from "@/components/sections/LightboxModal";
 import FaqSection from "@/components/sections/FaqSection";
+import AboutSection from "@/components/sections/AboutSection";
 
 export default function HomePage() {
   const [getCallModalOpen, setGetCallModalOpen] = useState(false);
@@ -49,6 +50,9 @@ export default function HomePage() {
 
         {/* Services Catalogue (8 Equipment Cards) */}
         <ServicesSection onOpenGetCall={() => setGetCallModalOpen(true)} />
+
+        {/* About Harisang Enterprises Section */}
+        <AboutSection onOpenGetCall={() => setGetCallModalOpen(true)} />
 
         {/* Gallery Grid & Lightbox */}
         <GallerySection />

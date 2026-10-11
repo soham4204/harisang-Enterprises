@@ -19,9 +19,10 @@ export const SITE_CONFIG = {
 export const NAV_ITEMS = [
   { label: "Home", href: "#home" },
   { label: "Our Services", href: "#services" },
-  { label: "Our Gallery", href: "#gallery" },
   { label: "About Us", href: "#about" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Our Gallery", href: "#gallery" },
+  { label: "FAQs", href: "#faq" },
+  { label: "Contact Us", href: "#contact-details" },
 ];
 
 export function getWhatsAppUrl(customMessage?: string): string {
