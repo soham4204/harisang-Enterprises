@@ -33,12 +33,12 @@ export default function MobileNav({ isOpen, onClose, onOpenGetCall }: MobileNavP
       />
 
       {/* Drawer */}
-      <div className="fixed inset-y-0 right-0 w-full max-w-xs bg-[#0f141c] border-l border-[#222d3d] shadow-2xl flex flex-col justify-between overflow-y-auto animate-in slide-in-from-right duration-300">
+      <div className="fixed inset-y-0 right-0 w-full max-w-xs bg-white border-l border-slate-200 shadow-2xl flex flex-col justify-between overflow-y-auto animate-in slide-in-from-right duration-300">
         <div>
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-[#222d3d] bg-[#151c27]">
+          <div className="flex items-center justify-between p-4 border-b border-slate-200 bg-slate-50">
             <div className="flex items-center gap-2">
-              <div className="relative w-8 h-8 rounded overflow-hidden bg-white p-0.5">
+              <div className="relative w-8 h-8 rounded-lg overflow-hidden bg-white p-0.5 border border-[#fdb813]">
                 <Image
                   src="/assets/logo.png"
                   alt={SITE_CONFIG.name}
@@ -47,13 +47,13 @@ export default function MobileNav({ isOpen, onClose, onOpenGetCall }: MobileNavP
                   className="object-contain"
                 />
               </div>
-              <span className="font-bold text-white text-base tracking-wide">
+              <span className="font-extrabold text-[#0f3b73] text-base tracking-wide">
                 HARISANG
               </span>
             </div>
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-[#222d3d] transition-colors"
+              className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition-colors"
               aria-label="Close menu"
             >
               <X className="w-5 h-5" />
@@ -70,10 +70,10 @@ export default function MobileNav({ isOpen, onClose, onOpenGetCall }: MobileNavP
                 key={item.label}
                 href={item.href}
                 onClick={onClose}
-                className="flex items-center justify-between px-4 py-3 rounded-lg text-slate-200 hover:text-[#fdb813] hover:bg-[#151c27] font-medium text-base transition-colors"
+                className="flex items-center justify-between px-4 py-3 rounded-lg text-slate-700 hover:text-[#0f3b73] hover:bg-slate-100 font-semibold text-base transition-colors"
               >
                 <span>{item.label}</span>
-                <span className="text-[#fdb813] text-sm">›</span>
+                <span className="text-[#0f3b73] text-sm">›</span>
               </a>
             ))}
           </nav>
@@ -85,7 +85,7 @@ export default function MobileNav({ isOpen, onClose, onOpenGetCall }: MobileNavP
                 onClose();
                 onOpenGetCall();
               }}
-              className="w-full flex items-center justify-center gap-2 bg-[#fdb813] hover:bg-[#e5a812] text-black font-bold py-3 rounded-lg transition-transform active:scale-95 shadow-md text-sm"
+              className="w-full flex items-center justify-center gap-2 bg-[#fdb813] hover:bg-[#e5a812] text-black font-extrabold py-3 rounded-lg transition-transform active:scale-95 shadow-sm text-sm"
             >
               <span>Get A Callback</span>
             </button>
@@ -93,7 +93,7 @@ export default function MobileNav({ isOpen, onClose, onOpenGetCall }: MobileNavP
             <a
               href={getTelUrl()}
               onClick={handlePhoneClick}
-              className="w-full flex items-center justify-center gap-2 bg-[#0d2847] hover:bg-[#183e6b] text-white border border-[#223d60] font-semibold py-2.5 rounded-lg transition-colors text-sm"
+              className="w-full flex items-center justify-center gap-2 bg-[#0f3b73] hover:bg-[#0a254a] text-white font-bold py-2.5 rounded-lg transition-colors text-sm shadow-sm"
             >
               <Phone className="w-4 h-4 text-[#fdb813]" />
               <span>Call: {SITE_CONFIG.phoneDisplay}</span>
@@ -104,7 +104,7 @@ export default function MobileNav({ isOpen, onClose, onOpenGetCall }: MobileNavP
               onClick={handleWhatsAppClick}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 bg-[#128C7E] hover:bg-[#075E54] text-white font-semibold py-2.5 rounded-lg transition-colors text-sm"
+              className="w-full flex items-center justify-center gap-2 bg-[#128C7E] hover:bg-[#075E54] text-white font-bold py-2.5 rounded-lg transition-colors text-sm shadow-sm"
             >
               <MessageSquare className="w-4 h-4" />
               <span>Chat on WhatsApp</span>
@@ -113,13 +113,13 @@ export default function MobileNav({ isOpen, onClose, onOpenGetCall }: MobileNavP
         </div>
 
         {/* Footer info in drawer */}
-        <div className="p-4 border-t border-[#222d3d] bg-[#121721] text-xs text-slate-400 space-y-2">
+        <div className="p-4 border-t border-slate-200 bg-slate-50 text-xs text-slate-600 space-y-2">
           <div className="flex items-start gap-2">
-            <MapPin className="w-4 h-4 text-[#fdb813] shrink-0 mt-0.5" />
+            <MapPin className="w-4 h-4 text-[#0f3b73] shrink-0 mt-0.5" />
             <span>Wagle Estate, Thane (W), Maharashtra</span>
           </div>
           <div className="flex items-center gap-2">
-            <Mail className="w-4 h-4 text-[#fdb813] shrink-0" />
+            <Mail className="w-4 h-4 text-[#0f3b73] shrink-0" />
             <span className="truncate">{SITE_CONFIG.email}</span>
           </div>
         </div>

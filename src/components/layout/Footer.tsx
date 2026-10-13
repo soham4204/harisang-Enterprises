@@ -36,9 +36,9 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
   };
 
   return (
-    <footer id="contact" className="bg-[#0b0e14] text-slate-300 pt-16 border-t border-[#1e2736]">
+    <footer id="contact" className="bg-[#0a1f3d] text-slate-200 pt-16 border-t border-[#061427]">
       {/* Top Hazard Line */}
-      <div className="h-1 hazard-stripes w-full mb-12 opacity-80" />
+      <div className="h-1 hazard-stripes w-full mb-12 opacity-90" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -49,7 +49,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
               Get In Touch
             </h4>
             <div className="space-y-3.5 text-sm">
-              <p className="flex items-start gap-3 text-slate-400">
+              <p className="flex items-start gap-3 text-slate-300">
                 <MapPin className="w-5 h-5 text-[#fdb813] shrink-0 mt-0.5" />
                 <span>{SITE_CONFIG.address}</span>
               </p>
@@ -57,7 +57,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
                 <a
                   href={getTelUrl()}
                   onClick={handlePhoneClick}
-                  className="flex items-center gap-3 text-slate-300 hover:text-[#fdb813] transition-colors"
+                  className="flex items-center gap-3 text-slate-200 hover:text-[#fdb813] transition-colors"
                 >
                   <Phone className="w-4 h-4 text-[#fdb813] shrink-0" />
                   <span>{SITE_CONFIG.phoneDisplay}</span>
@@ -66,7 +66,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
               <p>
                 <a
                   href={getMailtoUrl()}
-                  className="flex items-center gap-3 text-slate-300 hover:text-[#fdb813] transition-colors break-all"
+                  className="flex items-center gap-3 text-slate-200 hover:text-[#fdb813] transition-colors break-all"
                 >
                   <Mail className="w-4 h-4 text-[#fdb813] shrink-0" />
                   <span>{SITE_CONFIG.email}</span>
@@ -83,7 +83,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
                 href={SITE_CONFIG.socials.twitter}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded bg-[#151c27] hover:bg-[#fdb813] hover:text-black text-slate-300 flex items-center justify-center transition-colors border border-[#222d3d]"
+                className="w-9 h-9 rounded-lg bg-[#0e274c] hover:bg-[#fdb813] hover:text-black text-slate-200 flex items-center justify-center transition-colors border border-blue-900/50"
                 aria-label="Twitter"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -96,7 +96,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
                 href={SITE_CONFIG.socials.facebook}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded bg-[#151c27] hover:bg-[#fdb813] hover:text-black text-slate-300 flex items-center justify-center transition-colors border border-[#222d3d]"
+                className="w-9 h-9 rounded-lg bg-[#0e274c] hover:bg-[#fdb813] hover:text-black text-slate-200 flex items-center justify-center transition-colors border border-blue-900/50"
                 aria-label="Facebook"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -109,7 +109,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
                 href={SITE_CONFIG.socials.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded bg-[#151c27] hover:bg-[#fdb813] hover:text-black text-slate-300 flex items-center justify-center transition-colors border border-[#222d3d]"
+                className="w-9 h-9 rounded-lg bg-[#0e274c] hover:bg-[#fdb813] hover:text-black text-slate-200 flex items-center justify-center transition-colors border border-blue-900/50"
                 aria-label="LinkedIn"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -122,7 +122,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
                 href={SITE_CONFIG.socials.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded bg-[#151c27] hover:bg-[#fdb813] hover:text-black text-slate-300 flex items-center justify-center transition-colors border border-[#222d3d]"
+                className="w-9 h-9 rounded-lg bg-[#0e274c] hover:bg-[#fdb813] hover:text-black text-slate-200 flex items-center justify-center transition-colors border border-blue-900/50"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -143,7 +143,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="flex items-center gap-2 text-slate-400 hover:text-[#fdb813] transition-colors"
+                    className="flex items-center gap-2 text-slate-300 hover:text-[#fdb813] transition-colors"
                   >
                     <ChevronRight className="w-4 h-4 text-[#fdb813]" />
                     <span>{item.label}</span>
@@ -164,7 +164,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
                 <button
                   key={thumb.index}
                   onClick={() => onOpenLightbox && onOpenLightbox(thumb.index)}
-                  className="relative aspect-square rounded overflow-hidden border border-[#222d3d] hover:border-[#fdb813] transition-all group cursor-pointer"
+                  className="relative aspect-square rounded-lg overflow-hidden border border-blue-900/60 hover:border-[#fdb813] transition-all group cursor-pointer"
                   title="View enlarged image"
                 >
                   <Image
@@ -178,7 +178,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
                 </button>
               ))}
             </div>
-            <p className="text-xs text-slate-500 mt-3">
+            <p className="text-xs text-slate-400 mt-3">
               Click thumbnail to open full-screen lightbox preview.
             </p>
           </div>
@@ -189,19 +189,19 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
               <span className="w-2.5 h-2.5 bg-[#fdb813] rounded-sm"></span>
               About Company
             </h4>
-            <p className="text-sm text-slate-400 leading-relaxed mb-4">
+            <p className="text-sm text-slate-300 leading-relaxed mb-4">
               Harisang Enterprises is one of India’s leading end-to-end Crane rental & hiring companies. Specializing in offering an extensive range of equipment on hire basis; besides this, we also offer handling of oversized and heavy lifting projects across Mumbai, Thane, and Maharashtra.
             </p>
-            <div className="p-3 rounded-lg bg-[#151c27] border border-[#222d3d] text-xs text-slate-300">
-              <span className="font-semibold text-[#fdb813]">Heavy Equipment Fleet:</span> Cranes, Road Rollers, JCBs, Poclains, Forklifts, and Multi-Axle Trailers.
+            <div className="p-3.5 rounded-xl bg-[#0e274c] border border-blue-900/60 text-xs text-slate-200">
+              <span className="font-bold text-[#fdb813]">Heavy Equipment Fleet:</span> Cranes, Road Rollers, JCBs, Poclains, Forklifts, and Multi-Axle Trailers.
             </div>
           </div>
         </div>
       </div>
 
       {/* Copyright Bar */}
-      <div className="border-t border-[#1a2331] bg-[#07090d] py-6 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div className="border-t border-[#061427] bg-[#061427] py-6 px-4">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
           <p className="text-center sm:text-left">
             &copy; 2026 <strong className="text-white">Harisang Enterprises</strong>. All Rights Reserved. Heavy Equipment & Crane Rental Specialists.
           </p>
@@ -209,7 +209,7 @@ export default function Footer({ onOpenLightbox }: FooterProps) {
           <div className="flex items-center gap-4">
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1.5 text-slate-300 hover:text-[#fdb813] transition-colors bg-[#151c27] px-3 py-1.5 rounded border border-[#222d3d] hover:border-[#fdb813] cursor-pointer"
+              className="flex items-center gap-1.5 text-slate-200 hover:text-[#fdb813] transition-colors bg-[#0e274c] px-3.5 py-1.5 rounded-lg border border-blue-900/60 hover:border-[#fdb813] cursor-pointer"
             >
               <ArrowUp className="w-3.5 h-3.5 text-[#fdb813]" />
               <span>Back To Top</span>

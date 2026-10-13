@@ -105,15 +105,15 @@ export default function HeroSlider() {
           </div>
 
           {/* Gradients */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0f141c] via-transparent to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/65 to-black/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40" />
 
           {/* Content Container */}
           <div className="absolute inset-0 flex items-center z-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
               <div className="max-w-2xl sm:max-w-3xl">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-[#0d2847]/85 border border-[#183e6b] text-[#fdb813] font-bold text-xs uppercase tracking-wider mb-4 shadow-sm">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0f3b73]/90 border border-blue-400/30 text-[#fdb813] font-extrabold text-xs uppercase tracking-wider mb-4 shadow-sm backdrop-blur-md">
                   <span className="w-2 h-2 rounded-full bg-[#fdb813] animate-pulse"></span>
                   <span>{slide.badge}</span>
                 </div>
@@ -124,7 +124,7 @@ export default function HeroSlider() {
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-sm sm:text-base md:text-lg text-slate-300 mb-8 max-w-xl font-normal leading-relaxed drop-shadow">
+                <p className="text-sm sm:text-base md:text-lg text-slate-200 mb-8 max-w-xl font-normal leading-relaxed drop-shadow">
                   {slide.subtitle}
                 </p>
 
@@ -132,7 +132,7 @@ export default function HeroSlider() {
                 <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                   <a
                     href="#services"
-                    className="flex items-center gap-2 bg-[#fdb813] hover:bg-[#e5a812] text-black font-extrabold px-5 sm:px-6 py-3 sm:py-3.5 rounded-lg text-sm sm:text-base shadow-lg hover:shadow-xl transition-all transform active:scale-95"
+                    className="flex items-center gap-2 bg-[#fdb813] hover:bg-[#e5a812] text-black font-extrabold px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base shadow-lg hover:shadow-xl transition-all transform active:scale-95"
                   >
                     <span>{slide.ctaText}</span>
                     <ArrowDownCircle className="w-4 h-4" />
@@ -141,7 +141,7 @@ export default function HeroSlider() {
                   <a
                     href={getTelUrl()}
                     onClick={handlePhoneClick}
-                    className="flex items-center gap-2 bg-[#0d2847] hover:bg-[#183e6b] text-white border border-[#223d60] font-bold px-5 sm:px-6 py-3 sm:py-3.5 rounded-lg text-sm sm:text-base transition-colors"
+                    className="flex items-center gap-2 bg-[#0f3b73] hover:bg-[#0a254a] text-white border border-blue-400/30 font-bold px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base transition-colors shadow-md"
                   >
                     <Phone className="w-4 h-4 text-[#fdb813]" />
                     <span>Call Now</span>
@@ -152,7 +152,7 @@ export default function HeroSlider() {
                     onClick={handleWhatsAppClick}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-[#128C7E] hover:bg-[#0b665c] text-white font-bold px-4 sm:px-5 py-3 sm:py-3.5 rounded-lg text-sm sm:text-base transition-colors"
+                    className="flex items-center gap-2 bg-[#128C7E] hover:bg-[#0b665c] text-white font-bold px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base transition-colors shadow-md"
                   >
                     <MessageSquare className="w-4 h-4" />
                     <span>WhatsApp</span>

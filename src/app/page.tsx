@@ -33,7 +33,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f141c] text-white flex flex-col selection:bg-[#fdb813] selection:text-black">
+    <div className="min-h-screen bg-white text-slate-900 flex flex-col selection:bg-[#fdb813] selection:text-black">
       {/* Automated Traffic Tracker */}
       <AnalyticsTracker pageName="Home" />
 

@@ -104,7 +104,7 @@ export default function RootLayout({
       <head>
         <JsonLd />
       </head>
-      <body className="min-h-screen bg-[#0f141c] text-white antialiased">
+      <body className="min-h-screen bg-white text-slate-900 antialiased selection:bg-[#fdb813] selection:text-black">
         {children}
       </body>
     </html>

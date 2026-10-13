@@ -46,12 +46,12 @@ export default function GetACallModal({ isOpen, onClose }: GetACallModalProps) {
       />
 
       {/* Modal Dialog */}
-      <div className="relative w-full max-w-sm bg-[#151c27] border-2 border-[#fdb813] rounded-2xl shadow-2xl overflow-hidden z-10 animate-in zoom-in-95 duration-200">
+      <div className="relative w-full max-w-sm bg-white border-2 border-[#fdb813] rounded-3xl shadow-2xl overflow-hidden z-10 animate-in zoom-in-95 duration-200">
         {/* Header */}
         <div className="bg-[#fdb813] text-black px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <PhoneCall className="w-5 h-5 fill-black" />
-            <h3 className="font-black text-xl tracking-tight">Get A Call</h3>
+            <h3 className="font-black text-xl tracking-tight text-slate-950">Get A Call</h3>
           </div>
           <button
             onClick={handleReset}
@@ -69,11 +69,11 @@ export default function GetACallModal({ isOpen, onClose }: GetACallModalProps) {
         <div className="p-6">
           {isSuccess ? (
             <div className="text-center py-4">
-              <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto mb-3" />
-              <h4 className="text-lg font-bold text-white mb-1">
+              <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto mb-3" />
+              <h4 className="text-lg font-bold text-slate-900 mb-1">
                 Thank You!
               </h4>
-              <p className="text-xs text-slate-300 mb-6">
+              <p className="text-xs text-slate-600 mb-6">
                 Your request has been registered. An equipment specialist from {SITE_CONFIG.name} will call you shortly.
               </p>
 
@@ -82,13 +82,13 @@ export default function GetACallModal({ isOpen, onClose }: GetACallModalProps) {
                   href={getWhatsAppUrl(`Hello Harisang Enterprises, I just requested a callback for mobile number: ${mobile}`)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-[#128C7E] hover:bg-[#075E54] text-white font-bold py-2.5 rounded-lg text-xs transition-colors"
+                  className="block w-full bg-[#128C7E] hover:bg-[#075E54] text-white font-bold py-2.5 rounded-xl text-xs transition-colors shadow-xs"
                 >
                   Also Chat on WhatsApp
                 </a>
                 <button
                   onClick={handleReset}
-                  className="w-full bg-[#222d3d] hover:bg-[#2c394c] text-slate-300 font-semibold py-2 rounded-lg text-xs transition-colors cursor-pointer"
+                  className="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-2 rounded-xl text-xs transition-colors cursor-pointer"
                 >
                   Close Window
                 </button>
@@ -96,7 +96,7 @@ export default function GetACallModal({ isOpen, onClose }: GetACallModalProps) {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
-              <p className="text-xs text-slate-300">
+              <p className="text-xs text-slate-600">
                 Enter your mobile number to receive immediate machinery availability and rental quotes:
               </p>
 
@@ -110,11 +110,11 @@ export default function GetACallModal({ isOpen, onClose }: GetACallModalProps) {
                   }}
                   placeholder="Enter 10-Digit Mobile Number"
                   maxLength={10}
-                  className="w-full bg-[#0b0e14] border-2 border-emerald-500/80 focus:border-[#fdb813] text-white px-4 py-3 rounded-xl text-base outline-none transition-colors text-center font-semibold tracking-wider placeholder:font-normal placeholder:tracking-normal placeholder:text-slate-500"
+                  className="w-full bg-slate-50 border-2 border-slate-300 focus:border-[#0f3b73] text-slate-900 px-4 py-3 rounded-xl text-base outline-none transition-colors text-center font-semibold tracking-wider placeholder:font-normal placeholder:tracking-normal placeholder:text-slate-400"
                   autoFocus
                 />
                 {error && (
-                  <p className="text-xs text-rose-400 mt-1.5 font-medium text-center">
+                  <p className="text-xs text-rose-500 mt-1.5 font-medium text-center">
                     {error}
                   </p>
                 )}
@@ -122,12 +122,12 @@ export default function GetACallModal({ isOpen, onClose }: GetACallModalProps) {
 
               <button
                 type="submit"
-                className="w-full bg-[#fdb813] hover:bg-[#e5a812] text-black font-extrabold py-3 rounded-xl text-sm transition-transform active:scale-95 shadow-md cursor-pointer uppercase tracking-wider"
+                className="w-full bg-[#fdb813] hover:bg-[#e5a812] text-black font-extrabold py-3.5 rounded-xl text-sm transition-transform active:scale-95 shadow-md cursor-pointer uppercase tracking-wider"
               >
                 Send Request
               </button>
 
-              <p className="text-[11px] text-slate-500 text-center">
+              <p className="text-[11px] text-slate-400 text-center">
                 Fast Response • Direct Fleet Owners • Thane & Mumbai
               </p>
             </form>
