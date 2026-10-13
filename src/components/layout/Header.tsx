@@ -40,7 +40,7 @@ export default function Header({ onOpenGetCall }: HeaderProps) {
                 <span className="text-xl sm:text-2xl font-black tracking-wider text-[#0f3b73] flex items-center gap-1.5">
                   HARISANG
                   <span className="text-xs bg-[#fdb813] text-black px-1.5 py-0.5 rounded font-extrabold uppercase shadow-xs">
-                    Rentals
+                    ENTERPRISES
                   </span>
                 </span>
                 <span className="text-[11px] sm:text-xs text-slate-500 font-semibold tracking-wide">
